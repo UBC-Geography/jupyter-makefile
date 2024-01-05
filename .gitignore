@@ -1,0 +1,6 @@
+env
+.ipynb_checkpoints
+environment.yml
+*.ipynb
+install.R
+requirements.txt

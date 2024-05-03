@@ -50,7 +50,7 @@ ifeq ($(LANG),R)
 	mamba install -p $(ENV) r-irkernel -y
 	mamba run -p $(ENV) Rscript -e "IRkernel::installspec(name='$(PROJECT_SLUG)',displayname='R ($(PROJECT_NAME))')"
 else
-	mamba install -p $(ENV) ipykernel -y
+	mamba run -p $(ENV) python -m pip install ipykernel
 	mamba run -p $(ENV) python -m ipykernel install --user --name "$(PROJECT_SLUG)" --display-name "Python ($(PROJECT_NAME))"
 endif
 
